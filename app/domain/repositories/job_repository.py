@@ -8,9 +8,5 @@ if TYPE_CHECKING:
 
 class JobRepository(ABC):
     @abstractmethod
-    async def fetch_jobs(self) -> list[Job]:
+    async def scrape_jobs(self) -> list[Job]:
         raise NotImplementedError
-    
-    
-    
-    

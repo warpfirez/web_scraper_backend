@@ -8,9 +8,9 @@ if TYPE_CHECKING:
   from app.domain.entities.job import Job
 
 
-class FetchJobs:
-  def __init__(self, job_repository: JobRepository) -> None:
+class ScrapeJobs:
+  def __init__(self, job_repository: JobRepository):
     self._job_repository = job_repository
 
   async def __call__(self) -> list[Job]:
-    return await self._job_repository.fetch_jobs()
+    return await self._job_repository.scrape_jobs()
