@@ -11,3 +11,7 @@ class JobStore(ABC):
     @abstractmethod
     async def save_jobs(self, jobs: list[Job]) -> None:
         raise NotImplementedError
+    
+    @abstractmethod
+    async def fetch_jobs(self) -> list[Job]:
+        raise NotImplementedError

@@ -8,5 +8,5 @@ class RunScrape:
         self.job_store = job_store
         
     async def __call__(self):
-        await self.job_source.fetch_jobs()
+        await self.job_source.scrape_jobs()
         await self.job_store.save_jobs([])

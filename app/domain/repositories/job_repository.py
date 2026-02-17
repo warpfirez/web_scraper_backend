@@ -7,9 +7,6 @@ if TYPE_CHECKING:
     from app.domain.entities.job import Job
 
 class JobRepository(ABC):
-    @abstractmethod
-    async def fetch_jobs(self) -> list[Job]:
-        raise NotImplementedError
     
     @abstractmethod
     async def scrape_jobs(self):
