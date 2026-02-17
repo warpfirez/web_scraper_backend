@@ -6,11 +6,8 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from app.domain.entities.job import Job
 
-class JobRepository(ABC):
+
+class JobStore(ABC):
     @abstractmethod
-    async def fetch_jobs(self) -> list[Job]:
+    async def save_jobs(self, jobs: list[Job]) -> None:
         raise NotImplementedError
-    
-    @abstractmethod
-    async def scrape_jobs(self):
-        pass

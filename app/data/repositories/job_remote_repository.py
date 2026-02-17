@@ -15,5 +15,5 @@ class JobRemoteRepository(JobRepository):
         self.noFluffScraper = noFluffScraper
         self.justJoinScraper = justJoinScraper
     
-    async def scrape_jobs(self) -> list[Job]:
-        raise NotImplementedError
+    async def scrape_jobs(self):
+        pass

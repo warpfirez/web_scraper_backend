@@ -1,0 +1,11 @@
+{
+    "Future annotations": {
+        "prefix": "futann",
+        "body": [
+            "from __future__ import annotations",
+            "",
+            "$0"
+        ],
+        "description": "Insert: from __future__ import annotations"
+    }
+}
